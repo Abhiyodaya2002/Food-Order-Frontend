@@ -46,13 +46,13 @@ export default function Home() {
 
     </div>
     <div className="carousel-item active">
-      <img src="https://source.unsplash.com/random/900X700/?burger" className="d-block w-100" alt="..." style={{filter: "brightness(30%)"}}/>
+      <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" className="d-block w-100" alt="..." style={{filter: "brightness(30%)"}}/>
     </div>
     <div className="carousel-item">
-      <img src="https://source.unsplash.com/random/900X700/?Pastry" className="d-block w-100" alt="..." style={{filter: "brightness(30%)"}}/>
+      <img src="https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" className="d-block w-100" alt="..." style={{filter: "brightness(30%)"}}/>
     </div>
     <div className="carousel-item">
-      <img src="https://source.unsplash.com/random/900X700/?barbeque" className="d-block w-100" alt="..." style={{filter: "brightness(30%)"}}/>
+      <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?q=80&w=2053&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" className="d-block w-100" alt="..." style={{filter: "brightness(30%)"}}/>
     </div>
   </div>
   <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
@@ -68,7 +68,7 @@ export default function Home() {
 
             <div className='container' >
                 {
-                    foodCat !== [] ?
+                    foodCat.length >0 [] ?
                     foodCat.map((data)=>{
                         return(
                             <div className='row mb-3'>
@@ -78,7 +78,7 @@ export default function Home() {
                                 <hr  style={{color:"rgb(193 185 185)"}}/>
                                
                                 {
-                                    foodItem!==[]?
+                                    foodItem.length >0?
                                     foodItem.filter((item)=>{
                                        return (item.CategoryName===data.CategoryName) && (item.name.toLowerCase().includes(search.toLocaleLowerCase()))
                                     }).map((filterItems)=>{
